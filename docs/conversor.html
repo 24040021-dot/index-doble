@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Pesos a Dólares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="back-btn">← Volver</a>
+            <h1>💱 Conversor Pesos a Dólares</h1>
+            <p class="subtitle">Convierte tu dinero de pesos a dólares</p>
+        </div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="pesos">Cantidad en Pesos (MXN):</label>
+                <input 
+                    type="number" 
+                    id="pesos" 
+                    placeholder="Ingresa la cantidad"
+                    min="0"
+                    step="0.01"
+                >
+            </div>
+
+            <div class="button-group">
+                <button id="btnConvertir" class="btn btn-primary">Convertir</button>
+                <button id="btnLimpiarConversor" class="btn btn-secondary">Limpiar</button>
+            </div>
+
+            <div class="result-section">
+                <div class="result-item">
+                    <label for="dolares">Cantidad en Dólares (USD):</label>
+                    <input 
+                        type="number" 
+                        id="dolares" 
+                        disabled
+                        placeholder="0.00"
+                    >
+                </div>
+
+                <div class="result-item">
+                    <label for="tipoCambio">Tipo de Cambio:</label>
+                    <input 
+                        type="text" 
+                        id="tipoCambio" 
+                        disabled
+                        placeholder="1 USD = X MXN"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="conversor.js"></script>
+</body>
+</html>
